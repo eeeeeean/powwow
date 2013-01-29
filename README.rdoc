@@ -1,3 +1,16 @@
+To set it up:
+
+  bundle install
+  rails generate devise install
+  rails generate devise:views
+  rails generate devise User
+
+  rails generate rspec:install
+  bundle guard init rspec
+  bundle rake db:test:prepare
+  bundle exec guard (to start up the tests)
+
+
 I need to go over my relational model notes. This shit has to fit together before I make anything.
 
 Schema notes:
