@@ -25,3 +25,9 @@ Vote
 
 
 Group
+
+Remember:
+
+When we go to production, we'll need to change config/environments/production like so
+config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+We had to set that up for devise, just to start
