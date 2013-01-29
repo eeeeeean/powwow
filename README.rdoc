@@ -11,6 +11,7 @@ Resolution
 
 User
   has_many :messages
+  has_many :topics
   has_many :votes
 
 Message
@@ -23,3 +24,4 @@ Vote
   belongs_to :message
 
 
+Group
