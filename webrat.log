@@ -1,0 +1,14 @@
+# Logfile created on 2013-02-02 12:11:12 -0800 by logger.rb/31641
+REQUESTING PAGE: GET users/sign_up with {} and HTTP headers {}
+REQUESTING PAGE: GET users/sign_up with {} and HTTP headers {}
+REQUESTING PAGE: GET users/sign_up with {} and HTTP headers {}
+REQUESTING PAGE: GET users/sign_up with {} and HTTP headers {}
+REQUESTING PAGE: GET users/sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"utf8"=>"✓", "user"=>{"email"=>"something@something.com", "password"=>"second8inthesoB", "password_confirmation"=>"second8inthesoB"}, "commit"=>"Sign up"} and HTTP headers {"HTTP_REFERER"=>"users/sign_up"}
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+REQUESTING PAGE: GET users/sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"utf8"=>"✓", "user"=>{"email"=>"something@something.com", "password"=>"second8inthesoB", "password_confirmation"=>"second8inthesoB"}, "commit"=>"Sign up"} and HTTP headers {"HTTP_REFERER"=>"users/sign_up"}
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+REQUESTING PAGE: GET users/sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"utf8"=>"✓", "user"=>{"email"=>"something@something.com", "password"=>"second8inthesoB", "password_confirmation"=>"second8inthesoB"}, "commit"=>"Sign up"} and HTTP headers {"HTTP_REFERER"=>"users/sign_up"}
+REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
