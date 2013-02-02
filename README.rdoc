@@ -13,6 +13,8 @@ To set it up:
   It seems guard sees tmux and sends notifications to it directly.
   The 'rb-notify' gem was messing up notifications, so I removed it from the Gemfile and everything is fixed.
 
+  There was somthing I needed to add to spec/support/devise.rb for things to workie
+
 ############################
 1. Create users who can log in
 2. Users create groups
