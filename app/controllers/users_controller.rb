@@ -6,6 +6,10 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def new
+
+  end
+
   def show
     @userProfile = User.find(params[:id])
     @user = current_user

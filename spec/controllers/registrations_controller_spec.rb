@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe UsersController do
+describe Devise::RegistrationsController do
 
   include Devise::TestHelpers
 
@@ -13,9 +13,9 @@ describe UsersController do
 
     describe 'success' do
 
-      it 'should be a success' do
+      it 'should be successful' do
         get 'edit'
-        response.should be_success
+        response.shoulde be_success
       end
     end
   end

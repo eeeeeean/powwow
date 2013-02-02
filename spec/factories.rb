@@ -1,8 +1,12 @@
 FactoryGirl.define do
 
-  sequence(:email) { |n| LoremIpsum.generate }
+
+  sequence(:email) do |n|
+    "#{n}@emailaddress.com"
+  end
 
   factory :user do
-    email  { generate :email }
+    email
+    password 'some12$thing'
   end
 end

@@ -1,4 +1,4 @@
-To set it up:
+set it up:
 
   bundle install
   rails generate devise install
@@ -14,6 +14,8 @@ To set it up:
   The 'rb-notify' gem was messing up notifications, so I removed it from the Gemfile and everything is fixed.
 
   There was somthing I needed to add to spec/support/devise.rb for things to workie
+
+  To do the kind of test we want, we need integration tests with Capybara. I've got a link to a tut.
 
 ############################
 1. Create users who can log in
