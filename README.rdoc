@@ -13,7 +13,15 @@ To set it up:
   It seems guard sees tmux and sends notifications to it directly.
   The 'rb-notify' gem was messing up notifications, so I removed it from the Gemfile and everything is fixed.
 
+############################
+1. Create users who can log in
+2. Users create groups
+3. Users can create memberships in groups.
 
+
+
+
+###########################
 I need to go over my relational model notes. This shit has to fit together before I make anything.
 
 Schema notes:
@@ -40,7 +48,14 @@ Vote
   belongs_to :message
 
 
-Group
+######## Groups section #########
+
+User has_many Memberships
+Membership belongs_to User, Membership belongs_to Group
+GroupInvitations
+GroupApplications
+
+The first thing we should do is have a user create a group, and have users add themselves to groups, and subscribe to content.
 
 Remember:
 
