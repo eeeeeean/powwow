@@ -18,8 +18,8 @@ group :assets do
 end
 
 group :test, :development do
+  gem 'capybara'
   gem 'thin'
-#  gem 'rb-notify', '~> 0.8.8'
   gem 'webrat'
   gem 'therubyracer', :platforms => :ruby
   gem 'faker'
