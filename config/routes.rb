@@ -8,7 +8,15 @@ Powwow::Application.routes.draw do
 
   devise_for :users
 
-  resources :users
+  resources :users do
+    collection do
+
+    end
+
+    member do
+
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
