@@ -10,6 +10,9 @@ To set it up:
   bundle rake db:test:prepare
   bundle exec guard (to start up the tests)
 
+  It seems guard sees tmux and sends notifications to it directly.
+  The 'rb-notify' gem was messing up notifications, so I removed it from the Gemfile and everything is fixed.
+
 
 I need to go over my relational model notes. This shit has to fit together before I make anything.
 

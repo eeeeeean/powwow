@@ -19,7 +19,7 @@ end
 
 group :test, :development do
   gem 'thin'
-  gem 'rb-inotify', '~> 0.8.8'
+#  gem 'rb-notify', '~> 0.8.8'
   gem 'webrat'
   gem 'therubyracer', :platforms => :ruby
   gem 'faker'
