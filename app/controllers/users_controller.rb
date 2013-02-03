@@ -11,12 +11,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @userProfile = User.find(params[:id])
-    @user = current_user
   end
 
   def destroy
-    @user = current_user
-    after_sign_out_path_for @user
   end
 end

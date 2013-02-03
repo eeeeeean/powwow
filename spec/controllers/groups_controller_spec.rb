@@ -21,6 +21,12 @@ describe GroupsController do
 
     describe 'failure' do
 
+      it 'should not find new with wrong user' do
+        some_user = FactoryGirl.create(:user)
+        get 'new', user_id: some_user.id
+        response.should be_redirect
+      end
+
     end
   end
 
