@@ -1,3 +1,5 @@
+Powwow: chat with a purpose
+
 set it up:
 
   bundle install
