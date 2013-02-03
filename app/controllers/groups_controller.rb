@@ -1,7 +1,7 @@
 class GroupsController < ApplicationController
 
   def index
-
+    @groups = Group.find_all_by_user_id(params[:user_id])
   end
 
   def new
