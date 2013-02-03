@@ -9,7 +9,7 @@ class GroupsController < ApplicationController
   end
 
   def create
-    @group = Group.new(params[:group].merge(:user_id => current_user.id))
+    @group = Group.new(params[:group])
     if @group.save
       flash[:notice] = 'Group created'
       redirect_to user_group_path(current_user.id, @group.id) #THIS
