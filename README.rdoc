@@ -24,6 +24,7 @@ To do the kind of test we want, we need integration tests with Capybara. I've go
 ############################
 *1. Create users who can log in
 *2. Users create groups
+- make the form for creating a group also create a membership
 3. Users can create memberships in groups.
 
 
