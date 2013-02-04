@@ -1,10 +1,10 @@
 class GroupsController < ApplicationController
 
   before_filter :authenticate_user!
-  before_filter :right_user
+  before_filter :right_user, except: :index
 
   def index
-    @groups = Group.find_all_by_user_id(params[:user_id])
+    @groups = Group.all
   end
 
   def new

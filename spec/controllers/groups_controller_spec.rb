@@ -10,6 +10,17 @@ describe GroupsController do
     @attr = FactoryGirl.attributes_for(:group).merge(user_id: @user.id)
   end
 
+  describe 'GET index' do
+
+    describe 'success' do
+
+      it 'should be a success' do
+        get :index
+        response.should be_success
+      end
+    end
+  end
+
   describe 'GET new' do
 
     describe 'success' do
@@ -59,4 +70,6 @@ describe GroupsController do
       end
     end
   end
+
+
 end
