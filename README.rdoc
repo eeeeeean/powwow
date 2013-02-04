@@ -20,8 +20,8 @@ set it up:
   To do the kind of test we want, we need integration tests with Capybara. I've got a link to a tut.
 
 ############################
-1. Create users who can log in
-2. Users create groups
+*1. Create users who can log in
+*2. Users create groups
 3. Users can create memberships in groups.
 
 

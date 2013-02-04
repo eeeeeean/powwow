@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe GroupsController do
 
+  render_views
+
   before(:each) do
     @user = FactoryGirl.create(:user)
     sign_in @user
