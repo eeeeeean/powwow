@@ -27,9 +27,4 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
   end
 
-  private
-
-  def make_self_member(group)
-    Membership.new(user_id: current_user.id, group_id: group.id).save!
-  end
 end

@@ -11,6 +11,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  private
+  def make_self_member(group)
+    Membership.new(:user_id   => current_user.id,
+                   :group_id  => group.id).save!
+  end
 
+  def not_a_member?
+
+  end
 end
