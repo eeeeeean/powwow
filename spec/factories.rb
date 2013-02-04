@@ -1,17 +1,12 @@
 FactoryGirl.define do
 
-
-  sequence(:email) do |n|
-    "#{n}@emailaddress.com"
-  end
-
   factory :user do
-    email
+    sequence(:email) { |n| "#{n}@email.com" }
     password 'some12$thing'
   end
 
   factory :group do
     name 'some_name'
-    user_id 1
+    sequence(:user_id) { |n| n }
   end
 end

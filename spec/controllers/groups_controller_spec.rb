@@ -7,7 +7,7 @@ describe GroupsController do
   before(:each) do
     @user = FactoryGirl.create(:user)
     sign_in @user
-    @attr = FactoryGirl.attributes_for(:group)
+    @attr = FactoryGirl.attributes_for(:group).merge(user_id: @user.id)
   end
 
   describe 'GET new' do
@@ -17,6 +17,11 @@ describe GroupsController do
       it ', should work with valid user' do
         get 'new', user_id: @user.id
         response.should be_success
+      end
+
+      it 'should render the groups#new' do
+        get :new, user_id: @user.id
+        response.should have_selector('title', content: "New group")
       end
 
     end
@@ -37,8 +42,20 @@ describe GroupsController do
     describe 'success' do
 
       it 'should be a success' do
-        post :create, user_id: @user.id, attr: @attr
+        post :create, user_id: @user.id, group: @attr
         response.should be_redirect
+      end
+
+      it 'should change group count' do
+        lambda do
+          post :create, user_id: @user.id, group: @attr
+        end.should change(Group, :count)
+      end
+
+      it 'should change membership count' do
+        lambda do
+          post :create, user_id: @user.id, group: @attr
+        end.should change(Membership, :count).by(1)
       end
     end
   end
