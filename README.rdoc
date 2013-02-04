@@ -1,4 +1,6 @@
-Powwow: chat with a purpose
+=Powwow: chat with a purpose
+
+Also 'threadless' or 'thread bare'
 
 set it up:
 
@@ -12,12 +14,12 @@ set it up:
   bundle rake db:test:prepare
   bundle exec guard (to start up the tests)
 
-  It seems guard sees tmux and sends notifications to it directly.
-  The 'rb-notify' gem was messing up notifications, so I removed it from the Gemfile and everything is fixed.
+It seems guard sees tmux and sends notifications to it directly.
+The 'rb-notify' gem was messing up notifications, so I removed it from the Gemfile and everything is fixed.
 
-  There was somthing I needed to add to spec/support/devise.rb for things to workie
+There was somthing I needed to add to spec/support/devise.rb for things to workie
 
-  To do the kind of test we want, we need integration tests with Capybara. I've got a link to a tut.
+To do the kind of test we want, we need integration tests with Capybara. I've got a link to a tut.
 
 ############################
 *1. Create users who can log in
