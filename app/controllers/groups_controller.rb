@@ -14,6 +14,7 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new(params[:group])
     if @group.save
+      make_self_member(@group)
       flash[:notice] = 'Group created'
       redirect_to user_group_path(current_user.id, @group.id) #THIS
     else
@@ -24,5 +25,11 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
+  end
+
+  private
+
+  def make_self_member(group)
+    Membership.new(user_id: current_user.id, group_id: group.id).save!
   end
 end
