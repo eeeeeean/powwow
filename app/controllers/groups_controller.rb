@@ -17,7 +17,8 @@ class GroupsController < ApplicationController
       flash[:notice] = 'Group created'
       redirect_to user_group_path(current_user.id, @group.id) #THIS
     else
-      redirect_to user_group_path
+      flash[:notice] = 'Group could not be created'
+      redirect_to new_user_group_path(current_user.id)
     end
   end
 
