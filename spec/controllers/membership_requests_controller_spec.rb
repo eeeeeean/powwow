@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe MembershipRequestsController do
 
+  render_views
+
   before(:each) do
     @user = FactoryGirl.create(:user)
     sign_in @user
@@ -14,6 +16,11 @@ describe MembershipRequestsController do
     it 'should be a success' do
       get :new, :group_id => @group.id
       response.should be_success
+    end
+
+    it 'should have the right title' do
+      get :new, :group_id => @group.id
+      response.should have_selector('title', :content => 'Join group')
     end
   end
 end
