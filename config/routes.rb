@@ -12,7 +12,11 @@ Powwow::Application.routes.draw do
     resources :groups
   end
 
-  resources :groups
+  #we don't need so many routes, we'll need to cut down when we're done
+  resources :groups do
+    resources :membership_requests, :as => 'joins'
+  end
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

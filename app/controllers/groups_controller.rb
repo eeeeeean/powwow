@@ -25,6 +25,11 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
+    if a_member?
+      render 'show'
+    else
+      redirect_to new_group_join_path(@group.id)
+    end
   end
 
 end

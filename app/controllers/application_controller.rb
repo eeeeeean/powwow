@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
                    :group_id  => group.id).save!
   end
 
-  def not_a_member?
-
+  def a_member?
+    Membership.find_by_user_id(current_user.id) != nil
   end
 end
