@@ -9,4 +9,9 @@ FactoryGirl.define do
     name 'some_name'
     sequence(:user_id) { |n| n }
   end
+
+  factory :membership_request do
+    user_id 1
+    group_id 1
+  end
 end
