@@ -26,7 +26,7 @@ To do the kind of test we want, we need integration tests with Capybara. I've go
 *2. Users create groups
 *- make the form for creating a group also create a membership
 *3. Users can create memberships in groups.
-4. Users can look at descriptions of every group.
+*4. Users can look at descriptions of every group.
 *- validates a unique combination of user and group id
 - Users can go to a group page and create a membership_request, if they are not already a member
 

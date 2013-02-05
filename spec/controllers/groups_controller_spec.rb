@@ -31,24 +31,18 @@ describe GroupsController do
     describe 'success' do
 
       it ', should work with valid user' do
-        get 'new', user_id: @user.id
+        get 'new'
         response.should be_success
       end
 
       it 'should render the groups#new' do
-        get :new, user_id: @user.id
+        get :new
         response.should have_selector('title', content: "New group")
       end
 
     end
 
     describe 'failure' do
-
-      it 'should not find new with wrong user' do
-        some_user = FactoryGirl.create(:user)
-        get 'new', user_id: some_user.id
-        response.should be_redirect
-      end
 
     end
   end
@@ -58,23 +52,21 @@ describe GroupsController do
     describe 'success' do
 
       it 'should be a success' do
-        post :create, user_id: @user.id, group: @attr
+        post :create, group: @attr
         response.should be_redirect
       end
 
       it 'should change group count' do
         lambda do
-          post :create, user_id: @user.id, group: @attr
+          post :create, group: @attr
         end.should change(Group, :count)
       end
 
       it 'should change membership count' do
         lambda do
-          post :create, user_id: @user.id, group: @attr
+          post :create, group: @attr
         end.should change(Membership, :count).by(1)
       end
     end
   end
-
-
 end

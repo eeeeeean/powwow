@@ -11,10 +11,10 @@
 <% end %>
 <% if user_signed_in? %>
 <li>
-<%= link_to 'My groups', user_groups_path(current_user), method: 'get' %>
+<%= link_to 'My groups', groups_path, method: 'get' %>
 </li>
 <li>
-<%= link_to 'New group', new_user_group_path(current_user) %>
+<%= link_to 'New group', new_group_path(current_user) %>
 </li>
 <li>
 <%= link_to 'Edit account', edit_user_registration_path %>

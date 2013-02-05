@@ -10,6 +10,7 @@ Powwow::Application.routes.draw do
 
   resources :users do
     resources :groups
+    resources :memberships
   end
 
   #we don't need so many routes, we'll need to cut down when we're done
